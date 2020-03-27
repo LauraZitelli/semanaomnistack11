@@ -5,7 +5,7 @@ module.exports = {
     const { page = 1 } = request.query;
 
     const [count] = await connection('incidents').count();
-    console.log(count);
+    //console.log(count);
 
     const incidents = await connection('incidents')
       .join('ongs', 'ong_id', '=', 'incidents.ong_id') /*relaciona a tabela ongs apenas para as ongs cujo 
